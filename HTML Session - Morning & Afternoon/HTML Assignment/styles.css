@@ -36,3 +36,12 @@ li.title {
     padding: 14px 16px;
     text-decoration: none;
 }
+
+p.headline{
+  font-size: 3em;
+  text-align: center;
+  background-color: #bbb;
+  padding: 2em;
+  margin-top: 0.01em;
+}
+
