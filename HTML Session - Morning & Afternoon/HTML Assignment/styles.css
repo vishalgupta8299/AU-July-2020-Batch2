@@ -64,3 +64,10 @@ img.side{
   width: 50%;
   padding: 0.1em;
 }
+
+img.sidebyside{
+  width: 30%;
+  height: 15em;
+  border-style: solid;
+  border-color: brown;
+}
