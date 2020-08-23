@@ -1,0 +1,13 @@
+Difference Between /r & /n
+
+They're different characters. \r is carriage return, and \n is used for newline.
+
+For Example:
+
+console.log("Accolite \n University")
+O/P : 
+Accolite 
+ University
+ 
+console.log("Accolite \r University")
+Accolite  University
