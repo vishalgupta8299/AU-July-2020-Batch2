@@ -1,0 +1,53 @@
+
+<html>
+	<head>
+		Regex Assignment
+	</head>
+	<body>
+		
+		<script>
+		function checkString()
+		{
+			var str = document.getElementById("string").value;
+			reg1 = /^[T,t]he.*hello$/;
+			reg2 = /h[a,e,i,o,u]?t/;
+			var result = "";
+			if(str==null)
+			{
+				alert("Empty String");
+			}
+			else
+			{
+				if(reg1.test(str))
+				{
+					result += "Test 1 Passed";
+				}
+				if(reg2.test(str))
+				{
+					result+= "\nTest 2 Passed";
+				}
+				if(result.length==0)
+				{
+					alert("Invalid String");
+				}
+				else
+				{
+					alert(result);
+				}
+			}
+		}
+		</script>
+		
+		<pre>
+		Take string input from user to perform two tests-
+		A) It should start with "The/the" and end with "hello".
+		B) Should consist of a word which has h(a,e,i,o,u)t 1 or zero times 
+		and then should consist of any char once and should end with t.
+		</pre>
+		<br><br>
+		<form id = "regex">
+			<input type = "text" id = "string" placeholder= "Enter a String" required/>
+			<input type = "button" value="Check" onclick="checkString()">
+		</form>
+	</body>
+</html>
