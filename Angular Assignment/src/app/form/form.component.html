@@ -1,0 +1,40 @@
+<div class = "formdiv">
+    <form #userForm = "ngForm" novalidate>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" #firstname="ngModel" [class.is-invalid]="firstname.invalid && firstname.touched" [(ngModel)]="userModel.firstname" placeholder="Enter First name" name = "firstname" ngModel required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" #lastname="ngModel" [class.is-invalid]="lastname.invalid && lastname.touched" [(ngModel)]="userModel.lastname" placeholder="Enter Last name" name="lastname" ngModel required>
+        </div>
+        </div>
+          <div class="form-row">
+          <div class="form-group col-md-6">
+          <label for="email">Email</label>
+          <input type="email" pattern="[\w-]+@([\w-]+\.)+[\w-]+" class="form-control" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" [(ngModel)]="userModel.email" name="email" placeholder="Email" ngModel required>
+          <small class="text-danger" [class.d-none]="email.valid || email.untouched">Enter a Valid Email address</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" class="form-control" #address = "ngModel" [class.is-invalid]="address.invalid && address.touched" name="address" [(ngModel)]="userModel.address" placeholder="Enter Address" ngModel required>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="city">City</label>
+            <input type="text" class="form-control" #city = "ngModel" [class.is-invalid]="city.invalid && city.touched" name="city" [(ngModel)]="userModel.city" placeholder="Enter City" ngModel required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="zip">Zip</label>
+            <input type="text" class="form-control" #zip = "ngModel" [class.is-invalid]="zip.invalid && zip.touched" name="zip" [(ngModel)]="userModel.zip" placeholder="Enter Zip Code" ngModel required>
+          </div>
+        </div>
+        <button [disabled] = "userForm.form.invalid" type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+<hr/>
+<p>Using Pipe to show data in JSON Format</p>
+{{userForm.value | json}}

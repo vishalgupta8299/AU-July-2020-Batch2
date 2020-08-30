@@ -1,0 +1,15 @@
+div.blog{
+    margin-top: 20px;
+    padding: 30px;
+}
+
+h1{
+    font-family: 'Trebuchet MS';
+    color: green;
+}
+h3{
+    font-family: 'Trebuchet MS';
+    color: indigo;
+    padding-top: 20px;
+}
+
